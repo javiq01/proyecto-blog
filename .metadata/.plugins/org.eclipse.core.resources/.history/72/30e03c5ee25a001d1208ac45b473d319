@@ -1,0 +1,5 @@
+package com.educacionit.digitalers.dtos.repositories;
+
+public class UserDTOImpl {
+
+}

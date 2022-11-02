@@ -1,0 +1,5 @@
+package com.educacionit.digitalers.exceptions;
+
+public class ExceptionDTO {
+
+}

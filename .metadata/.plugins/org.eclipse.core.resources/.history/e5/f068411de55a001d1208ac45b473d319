@@ -1,0 +1,5 @@
+package com.educacionit.digitalers.controllers;
+
+public class LoginController {
+
+}
