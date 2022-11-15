@@ -1,5 +1,0 @@
-package com.educacionit.digitalers.dtos;
-
-public class UserLoginDTO {
-
-}

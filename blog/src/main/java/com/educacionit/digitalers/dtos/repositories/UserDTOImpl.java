@@ -32,7 +32,6 @@ public class UserDTOImpl implements GenericRepositoryDTO<UserDTO, Long>{
 	private UserDTOService userDTOService;
 
 	
-	
 	public Optional<UserDTO> findById(Long id) {
 		User user = userRepository.findById(id).orElse(null);
 		Optional<UserDTO> optionalUserDTO = Optional.of(userDTOService.getUserDTO(user, null));

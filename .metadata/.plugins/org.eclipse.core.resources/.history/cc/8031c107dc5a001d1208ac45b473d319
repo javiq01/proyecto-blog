@@ -1,5 +1,0 @@
-package com.educacionit.digitalers.enums;
-
-public enum MessageType {
-
-}

@@ -1,0 +1,5 @@
+package com.educacionit.digitalers.entities;
+
+public class Publication {
+
+}
