@@ -1,9 +1,0 @@
-package com.educacionit.digitalers.repositories;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.educacionit.digitalers.entities.Publication;
-
-public interface PublicationRepository extends JpaRepository<Publication, Long>{
-
-}

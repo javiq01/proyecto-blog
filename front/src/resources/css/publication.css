@@ -1,0 +1,23 @@
+.publication {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-content: center; */
+    margin:auto;
+    width: 50%;
+    margin-top: 15px;
+    color: black;
+}
+
+.publication > h2, .publication > p {
+    margin:10px;
+}
+
+.publication > p {
+    text-align: justify;
+}
+
+.titulo {
+    color: black;
+    text-align: center;
+}

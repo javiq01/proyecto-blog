@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="javax.validation.constraints.Email"/>
     <fullyQualifiedTypeName name="com.educacionit.digitalers.dtos.repositories.GenericRepositoryDTO"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
-    <fullyQualifiedTypeName name="com.educacionit.digitalers.entities.User"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
     <fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
@@ -20,4 +19,6 @@
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="com.educacionit.digitalers.enums.MessageType"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.educacionit.digitalers.entities.User"/>
+    <fullyQualifiedTypeName name="org.hibernate.bytecode.enhance.spi.interceptor.BytecodeInterceptorLogging_.logger"/>
 </qualifiedTypeNameHistroy>
