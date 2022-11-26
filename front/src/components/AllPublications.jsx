@@ -11,7 +11,6 @@ export default class AllPublications extends React.Component {
 
     componentDidMount() {
         this.findAllPublications();
-        // console.log(this.state.publications)
     }
 
     findAllPublications = () => {
@@ -19,7 +18,7 @@ export default class AllPublications extends React.Component {
         fetch(url)
             .then(response => response.json())
             .then(json =>  {
-                console.log("fetch findAllPublications")
+                // console.log("fetch findAllPublications")
                 console.log(json);
                 this.setState({publications : json})
             })
@@ -28,15 +27,32 @@ export default class AllPublications extends React.Component {
 
     }
 
+    imprimir = () => {
+        if (this.state.publications.length > 0) {
+            return (
+                <div>
+                    {
+                        this.state.publications.map(publication => 
+                            <Publication title = {publication.title} body={publication.body}></Publication>
+                        )
+                    }
+                </div>
+            );
+        }else {
+            return (
+                <div>
+                    <h3 className="titulo"> No hay publicaciones disponibles</h3>
+                </div>
+
+            );
+        }
+    }
+
     render() {
         return (
         <>
             <h2 className="titulo">Todas Las Publicaciones</h2>
-            {
-                this.state.publications.map(publication => 
-                    <Publication title = {publication.title} body={publication.body}></Publication>
-                )
-            }
+            {this.imprimir()}
         </>
         );
     }

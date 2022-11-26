@@ -1,15 +1,20 @@
+body {
+    background-color: rgba(106, 192, 243, 0.34);
+}
 .publication {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-content: center; */
     margin:auto;
-    width: 50%;
+    width: 70%;
     margin-top: 15px;
+    background-color: rgb(237, 251, 253);
+    border: 3px solid #107FC0;
+    border-radius: 10px;
     color: black;
 }
 
-.publication > h2, .publication > p {
+.publication h2, .publication p {
     margin:10px;
 }
 
@@ -20,4 +25,74 @@
 .titulo {
     color: black;
     text-align: center;
+}
+
+.newPublication {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.newPublication > form {
+    border: 2px solid cadetblue;
+    padding: 5px;
+    background-color: #107FC0;
+}
+
+.newPublication input, textarea {
+    font-size: 18px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.newPublication label {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.newPublication input {
+    border: 2px solid cadetblue;
+   width: 97%;
+    margin: 5px;
+}
+
+.button {
+    background-color: white;
+    color: #107FC0;
+    font-weight: bold;
+    margin: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
+}
+.button:hover {
+    color: #ffffff;
+    border: 2px solid white;
+    background-color: #107FC0;
+
+}
+
+
+.divPublicationButton{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #107FC0;
+}
+
+.publicationButton {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: #107FC0;
+    border-radius: 10px;
+}
+
+
+.publicationButton:hover {
+    color: #107FC0;
+    border-color: #ffffff;
+    background-color: #ffffff;
 }

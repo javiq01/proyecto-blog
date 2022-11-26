@@ -49,9 +49,10 @@ export default class Login extends Component {
             }
             )
             .then(json => {
-                console.log(json);
+                console.log(localStorage);
                 localStorage.uuid = json.uuid;
                 localStorage.credential = json.credential;
+                localStorage.id_user = json.id;
                 window.location.href="/myPublications";
             })
             .catch(error => {
@@ -92,8 +93,8 @@ export default class Login extends Component {
                         onChange={this.setValues}
                     />
                     <div>
-                        <button type="submit">Ingresar</button>
-                        <button type="reset" onClick={this.cleanValues}>Limpiar</button>
+                        <button className="button" type="submit">Ingresar</button>
+                        <button className="button" type="reset" onClick={this.cleanValues}>Limpiar</button>
                     </div>
                 </form>
             </>

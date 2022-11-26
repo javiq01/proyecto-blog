@@ -15,6 +15,7 @@ import com.educacionit.digitalers.dtos.UserDTO;
 import com.educacionit.digitalers.dtos.repositories.UserDTOImpl;
 import com.educacionit.digitalers.enums.MessageType;
 import com.educacionit.digitalers.exceptions.ExceptionDTO;
+import com.educacionit.digitalers.repositories.UserRepository;
 import com.educacionit.digitalers.services.LoginService;
 import com.educacionit.digitalers.services.ResponseMessageService;
 
@@ -32,6 +33,9 @@ public class UserController implements GenericRestController<UserDTO, Long> {
 	@Autowired
 	private LoginService loginService;
 	
+	@Autowired
+	private UserRepository userRepository;
+	
 	public ResponseEntity<?> findById(Long id) {
 		logger.info("ID : " + id);
 		try {
@@ -44,12 +48,21 @@ public class UserController implements GenericRestController<UserDTO, Long> {
 	}
 	
 	public ResponseEntity<?> insert(String uuid, @Valid UserDTO userDTO, BindingResult bindingResult) {
+		logger.info("userDTO : " + userDTO);
+		/*
 		logger.info("credential: " + uuid);
 		if (uuid == null) {
 			return ResponseEntity.status(400).body(responseMessageService.getResponseMessage(MessageType.BAD_REQUEST, "credential [" + uuid + "] No encontrado"));
 		}
 		if (!loginService.validateLogin(uuid)) {
 			return ResponseEntity.status(409).body(responseMessageService.getResponseMessage(MessageType.VALIDATION_ERROR, "credential [" + uuid + "] No encontrado"));
+		}
+		
+		*/
+		logger.info("UUID : --->" + uuid);
+		if (userRepository.findByEmail(userDTO.getEmail()).orElse(null) != null) {
+			logger.info("USUARIO REPETIDO -> " + userDTO.getEmail());
+			return ResponseEntity.status(409).body(responseMessageService.getResponseMessage(MessageType.EXISTING_USER, "usuario existente. No se admiten repetidos"));
 		}
 		return save(userDTO, bindingResult);
 	}
@@ -73,7 +86,7 @@ public class UserController implements GenericRestController<UserDTO, Long> {
 		
 		if (!loginService.validateLogin(uuid)) {
 			return ResponseEntity.status(409).body(responseMessageService.getResponseMessage(MessageType.VALIDATION_ERROR, "credential [" + uuid + "] No encontrado"));
-		}//
+		}
 		
 		if (bindingResult.hasErrors()) {
 			return ResponseEntity.status(400).body(responseMessageService.getResponseMessage(MessageType.VALIDATION_ERROR, bindingResult));

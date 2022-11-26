@@ -19,6 +19,6 @@
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Transactional"/>
     <fullyQualifiedTypeName name="com.educacionit.digitalers.enums.MessageType"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.educacionit.digitalers.entities.User"/>
     <fullyQualifiedTypeName name="org.hibernate.bytecode.enhance.spi.interceptor.BytecodeInterceptorLogging_.logger"/>
+    <fullyQualifiedTypeName name="com.educacionit.digitalers.entities.User"/>
 </qualifiedTypeNameHistroy>

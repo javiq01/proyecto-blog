@@ -37,7 +37,8 @@ public class LoginService {
 	
 	public Login getLogin(String mail) {
 		UUID uuid = UUID.randomUUID();
-		Login login = Login.builder().uuid(uuid).creationDate(LocalDateTime.now()).expiresIn(expiresIn).type(type).credential(credential).email(mail).build();
+		User user = userRepository.findByEmail(mail).orElse(null);
+		Login login = Login.builder().uuid(uuid).creationDate(LocalDateTime.now()).expiresIn(expiresIn).type(type).credential(credential).email(mail).id(user.getId()).build();
 
 		loggedUsers.put(uuid, login);
 		logger.info(loggedUsers);

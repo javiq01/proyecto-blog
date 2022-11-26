@@ -54,15 +54,15 @@ public class DataInitialize implements CommandLineRunner {
 
 	
 	private void publications() {
-		publicationRepository.save(Publication.builder().title("Publicacion 1")
+		publicationRepository.save(Publication.builder().title("Publicacion 1 u1")
 				.body("Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...")
 				.user(User.builder().id(1L).build()).build());
 		
-		publicationRepository.save(Publication.builder().title("Publicacion 2").body(
+		publicationRepository.save(Publication.builder().title("Publicacion 2 u1").body(
 				"qui dolorem ipsum, quia dolor sit amet consectetur adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem")
 				.user(User.builder().id(1L).build()).build());
 
-		publicationRepository.save(Publication.builder().title("Publicacion 1").body(
+		publicationRepository.save(Publication.builder().title("Publicacion 1 u2").body(
 				"Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure")
 				.user(User.builder().id(2L).build()).build());
 
